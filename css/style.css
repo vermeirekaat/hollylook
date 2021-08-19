@@ -1,0 +1,975 @@
+@font-face {
+    font-family: "Futura";
+    src: url('../assets/fonts/futura/futura-condensed-extra-bold.woff2') format('woff2'),
+         url('../assets/fonts/futura/futura-condensed-extra-bold.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: "GillSans";
+    src: url('../assets/fonts/gillsans/gillsans-ultra-bold.woff2') format('woff2'),
+         url('../assets/fonts/gillsans/gillsans-ultra-bold.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: "OptimaBold";
+    src: url('../assets/fonts/optima/optima-bold.woff2') format('woff2'),
+         url('../assets/fonts/optima/optima-bold.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: "OptimaBlack";
+    src: url('../assets/fonts/optima/optima-extra-black.woff2') format('woff2'),
+         url('../assets/fonts/optima/optima-extra-black.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: "OptimaItalic";
+    src: url('../assets/fonts/optima/optima-italic.woff2') format('woff2'),
+         url('../assets/fonts/optima/optima-italic.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: "OptimaRegular";
+    src: url('../assets/fonts/optima/optima-regular.woff2') format('woff2'),
+         url('../assets/fonts/optima/optima-regular.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Hollywood";
+    src: url('../assets/fonts/hollywood/hollywood.woff2') format('woff2'),
+         url('../assets/fonts/hollywood/hollywood.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+*{
+    box-sizing: inherit;
+}
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    background-color: #ffecd6;
+}
+button, input, select, textarea {
+    display: block;
+    background-color: #ffecd6;
+}
+input[type="radio"] {
+    visibility: hidden;
+}
+button {
+    border: none;
+}
+
+.hidden {
+    display: none; 
+}
+.info {
+    font-family: "Hollywood"; 
+    font-size: 5rem; 
+    color: #d24933;
+    display: flex; 
+    justify-content: center;
+    margin: 5rem; 
+}
+.error {
+    font-family: "OptimaItalic"; 
+    font-size: 1.5rem; 
+    margin-top: 1rem;
+    color: #d24933;  
+}
+.link {
+    text-decoration: none;
+}
+.has-js .filter-button {
+    display: none; 
+}
+
+.header {
+    margin-bottom: 5rem; 
+}
+.nav__list {
+    display: flex; 
+    justify-content: space-evenly; 
+    align-items: baseline; 
+    margin-top: 5rem; 
+    text-transform: uppercase;
+}
+.nav__link {
+    font-family: "Futura";
+    font-size: 3.5rem; 
+    text-decoration: none; 
+    color: #d77400; 
+}
+.nav__item--active {
+    text-decoration: underline;
+}
+.homepage {
+    font-family: "Hollywood"; 
+    font-size: 7rem; 
+}
+.homepage__link {
+    text-decoration: none; 
+    color: #352753; 
+}
+.extrapage {
+    display: flex; 
+    align-self: flex-start; 
+    background-color: #352753;
+    padding: 1.5rem; 
+}
+.extrapage__link {
+    color: white;
+}
+.extrapage__active {
+    background-color: #d24933;
+}
+.footer {
+    display: flex; 
+    justify-content: space-around; 
+    padding: 2.5rem; 
+    border-top: 0.5rem #d77400 solid; 
+    background-color: #ffecd6;
+}
+.socials__text {
+    font-family: "OptimaRegular"; 
+    font-size: 1.5rem; 
+    padding-bottom: 0.5rem;
+}
+.tagline-footer {
+    font-size: 2rem;
+}
+.tagline {
+    font-family: "OptimaBlack"; 
+    font-size: 6rem; 
+    text-transform: uppercase; 
+    text-align: right; 
+}
+
+.container {
+    margin-top: 5rem;
+    width: 96rem; 
+    margin: 0 auto;
+    display: block;
+}
+.headerimage {
+    display: flex; 
+    justify-content: center;
+}
+.headerimage__grid { 
+    position: relative; 
+    left: 20rem; 
+}
+.headerimage__image {
+    display: flex; 
+    flex-flow: row nowrap; 
+    justify-content: center; 
+    overflow: visible; 
+}
+.rainbow {
+     -webkit-animation:spin 6s linear infinite;
+    -moz-animation:spin 6s linear infinite;
+    animation:spin 6s linear infinite;
+}
+.headerimage--rainbowholly {
+    position: relative; 
+    top: 18rem;
+    left: 40rem; 
+}
+.headerimage--rainbowbuilding {
+    position: relative;
+    top: 15rem;
+    left: -5rem;
+}
+
+.headerimage--hollywood {
+    width: 80%; 
+    height: 80%; 
+    position: relative; 
+    left: -20rem;
+}
+.headerimage--building {
+    position: relative; 
+    left: -70rem;
+}
+.title--history {
+    position: relative;
+    top: -30rem; 
+    right: 20rem; 
+}
+.headerimage--grease {
+    width: 70%;
+    height: 70%;
+    position: relative;  
+    left: -32rem; 
+}
+.headerimage__title {
+    font-family: "OptimaBlack"; 
+    font-size: 9rem; 
+    line-height: 12rem;
+    text-transform: uppercase; 
+    text-align: right; 
+    width: 100rem;
+}
+.title--home {
+    position: relative; 
+    top: -18rem; 
+    left: -5rem; 
+} 
+.headerimage--create {
+    position: relative;
+}
+.headerimage--rainbowcreate {
+    position: relative; 
+    top: -22rem;
+    left: 41rem;
+}
+.title--create {
+    position: relative; 
+    left: -30rem;
+    top: 45rem;
+}
+.content {
+    display: flex; 
+    flex-flow: row; 
+    align-items: center;
+    margin-bottom: 20rem; 
+}
+.subtitle {
+    font-family: "GillSans";
+    font-size: 5rem; 
+    line-height: 7rem;
+    color: #352753;
+    position: relative;
+    left: -5rem; 
+    width: 50rem;
+    margin-bottom: 5rem;
+}
+.paragraph {
+    font-family: "OptimaRegular"; 
+    font-size: 2rem;
+    line-height: 3.5rem;
+    width: 35rem;
+    margin-bottom: 3rem;  
+}
+.paragraph span {
+    font-family: "OptimaBold"; 
+    color: #d77400; 
+}
+.button__link {
+    text-decoration: none; 
+    font-family: "Futura"; 
+    font-size: 2.5rem; 
+    text-transform: uppercase; 
+    display: flex; 
+    justify-content: center;
+}
+.link--red {
+    background-color: #d24933; 
+    border: #d24933 solid 0.5rem; 
+    padding: 1rem; 
+    color: white;
+}
+.link--white {
+    background-color: white; 
+    border: #d24933 solid 0.5rem; 
+    padding: 1rem; 
+    color: #d24933;
+} 
+.intro__image {
+    position: relative; 
+    top: -8rem; 
+} 
+.pattern--history {
+    position: relative;
+    right: 63rem;
+    top: -10rem;
+    z-index: -1;
+}
+.pattern--intro {
+    position: relative;
+    right: 82rem;
+    z-index: -1;
+    overflow: visible;
+}
+.history__image {
+    position: relative; 
+    top: -10rem;
+    left: 10rem; 
+}
+
+.overview {
+    display: flex; 
+    flex-flow: row;
+}
+.overview__right {
+    display: flex; 
+    flex-flow: column; 
+    align-content: center;
+    margin-bottom: 20rem;
+}
+.portrait {
+    background-image: url('../assets/img/svg/cadre.svg');
+    background-repeat: no-repeat; 
+    height: 70%;
+    width: 70%; 
+    position: relative; 
+    left: -10rem; 
+}
+.portrait__image { 
+    position: relative; 
+    top: 10rem; 
+    left: -5rem; 
+}
+.overview__extra {
+    display: flex; 
+    flex-flow: column;
+    margin-bottom: 10rem; 
+}
+.overview__left {
+    display: flex; 
+    flex-flow: column; 
+    align-content: center; 
+    width: 60rem; 
+    margin-top: 5rem;
+    margin-bottom: 3rem; 
+}
+.steps {
+    font-family: "Futura";
+    font-size: 4rem; 
+    color: white; 
+    -webkit-text-stroke: #e8cd6a 0.3rem;
+    text-transform: uppercase; 
+    margin-bottom: 2rem; 
+    margin-top: 3rem;    
+}
+.steps__content {
+    position: relative; 
+    left: 5rem;
+}
+.buttons {
+    display: flex; 
+    flex-flow: row; 
+    justify-content: space-between; 
+}
+
+.feature {
+    display: flex; 
+    flex-flow: column;
+    margin-bottom: 20rem; 
+}
+.subtitle--center {
+    font-family: "GillSans";
+    text-align: center;
+    font-size: 5rem; 
+    color: #352753;
+    display: flex;
+    align-self: center;
+    margin-bottom: 5rem;
+}
+.looks {
+    display: flex; 
+    justify-content: center;
+    display: grid; 
+    grid-template-columns: repeat(3, 30rem);
+    grid-gap: 2rem; 
+    margin-bottom: 5rem; 
+}
+.hollylook__image {
+    margin-right: 2rem; 
+}
+.looks:last-child {
+    margin-right: none;
+}
+
+
+.shop {
+    margin-bottom: 5rem;
+}
+.shop__container {
+    display: flex; 
+    flex-flow: column; 
+    justify-content: center;
+    position: relative; 
+    top: -15rem;
+}
+.shop__price {
+    margin-top: 2rem; 
+}
+.shop__price span {
+    color: #f18200; 
+    padding-right: 1rem; 
+}
+.checkout {
+    display: flex; 
+    flex-flow: column;
+    align-content: flex-end;
+    text-align: right;
+    position: relative; 
+    top: -30rem; 
+}
+.checkout__button {
+    display: flex; 
+    justify-content: flex-end;
+}
+.button__yellow {
+    font-family: "Futura"; 
+    font-size: 1.5rem; 
+    text-transform: uppercase; 
+    background-color: white; 
+    border: #e8cd6a solid 0.5rem; 
+    padding: 1rem; 
+    color: #e8cd6a;
+    margin: 2rem;
+}
+.button--remove {
+    font-family: "Futura"; 
+    font-size: 2rem; 
+    text-transform: uppercase; 
+    background-color: #ffecd6;
+    border: none;
+    color: #d24933;
+    position: relative; 
+    top: -0.5rem;
+}
+.shop__cart {
+    display: flex; 
+    justify-content: flex-end;
+    font-family: "Futura"; 
+    font-size: 6rem;
+    color: #e8cd6a; 
+    margin-bottom: 2rem;
+}
+.shop__cart span {
+    color: #d77400;
+}
+.shop__item {
+    display: flex; 
+    justify-content: flex-end;
+    font-family: "OptimaBold";
+    font-size: 2rem; 
+    text-transform: uppercase;
+    padding-bottom: 0.5rem;
+}
+.shop__overview {
+    display: grid; 
+    grid-template-columns: repeat(3, 30rem); 
+    grid-gap: 2rem; 
+    position: relative; 
+    top: -20rem;
+}
+.shop__introduction {
+    display: flex; 
+    flex-flow: row; 
+    justify-content: space-between;
+}
+.theatre--image {
+    position: relative; 
+    top: -15rem; 
+    left: -40rem; 
+    z-index: -1;
+}
+.introduction__text {
+    display: flex; 
+    flex-flow: column; 
+    position: relative; 
+    top: 10rem; 
+    text-align: right;
+}
+.movie__item {
+    width: 30rem; 
+    height: 60rem; 
+    background-color: #ffd5a6;
+    display: flex; 
+    flex-flow: column;
+    justify-content: center;
+    align-content: center;
+}
+.movie__poster {
+    display: flex; 
+    align-self: center;
+    margin-top: 2.5rem;
+}
+.movie__information {
+    margin: 2.5rem;
+}
+.movie__title {
+    font-family: "OptimaBlack";
+    font-size: 2rem; 
+    text-transform: uppercase;
+    padding-bottom: 2rem;
+}
+.movie__year {
+    font-family: "OptimaItalic"; 
+    font-size: 1.5rem; 
+}
+.movie__price {
+    font-family: "OptimaBold"; 
+    font-size: 2rem;
+    text-align: right; 
+    display: flex; 
+    flex-flow: column; 
+    align-items: flex-end;
+}
+.movie__purchase {
+    display: flex; 
+    justify-content: center;
+}
+.movie__buy {
+    font-family: "Futura"; 
+    font-size: 3rem; 
+    padding: 1rem; 
+    width: 20rem; 
+    color: #e8cd6a; 
+    background-color: white;
+    text-transform: uppercase; 
+    border: 1rem solid #e8cd6a;
+    margin: 2.5rem;
+}
+.button__shop {
+    display: flex; 
+    justify-content: center;
+    position: relative; 
+    top: -10rem;
+}
+
+.gallery {
+    display: flex; 
+    flex-flow: column;
+    justify-content: center;
+    margin-bottom: 10rem;
+}
+.gallery__filter {
+    display: flex; 
+    justify-content: space-around;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+.button__white {
+    font-family: "Futura"; 
+    font-size: 2.5rem; 
+    text-transform: uppercase; 
+    background-color: white; 
+    border: #e8cd6a solid 0.5rem; 
+    padding: 1rem; 
+    color: #e8cd6a;  
+}
+
+.gallery__grid {
+    display: flex;
+    justify-content: center;
+    display: grid; 
+    grid-template-columns: repeat(3, 30rem);
+    grid-gap: 1rem;
+}
+.introduction__blog {
+    display: flex; 
+    flex-flow: row;
+    margin-top: 20rem;
+}
+.button__blog {
+    display: flex; 
+    justify-content: flex-start;
+}
+.pattern--blog { 
+    position: relative;
+    right: 57.5rem;
+    z-index: -1;
+}
+.top__links {
+    display: flex; 
+    flex-flow: row; 
+    justify-content: space-between;
+    margin-bottom: 5rem;
+}
+.detail {
+    margin-bottom: 5rem;
+}
+.detail__back {
+    margin-bottom: 10rem;
+}
+.detail__image {
+    display: flex; 
+    flex-flow: row; 
+    justify-content: space-between;
+}
+.image__detail {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.movie__character {
+    font-family: "OptimaBold"; 
+    font-size: 1.5rem;
+}
+.movie__story {
+    font-family: "OptimaItalic"; 
+    font-size: 1.5rem;
+    padding-top: 3rem;
+}
+.image__overview {
+    margin-right: 5rem;
+}
+.image__text {
+    width: 40rem; 
+    display: flex; 
+    flex-flow: column;
+    justify-content: space-around;
+    margin-top: 5rem;
+}
+.list__item {
+    list-style-type: none;
+}
+.gallery__more {
+    position: relative; 
+    left: 85rem; 
+}
+
+.detail__socials {
+    display: flex; 
+    flex-flow: column; 
+    justify-content: flex-end; 
+}
+.image__user {
+    display: flex; 
+    flex-flow: row; 
+    justify-content: flex-start;
+}
+.fame-star {
+    display: flex; 
+    flex-flow: column; 
+    align-self: flex-start;
+    position: relative; 
+    top: -4rem;
+    left: -12rem;
+}
+.comments {
+    display: flex; 
+    flex-flow: row-reverse; 
+    justify-content: space-between;
+    position: relative; 
+    left: 15rem;
+    margin-bottom: 10rem;
+} 
+.comments__overview {
+    display: flex; 
+    flex-flow: column;
+    justify-content: flex-start;
+    margin-bottom: 10rem;
+}
+.comments__item {
+    display: flex; 
+    flex-flow: column;
+    border-bottom: #d77400 0.5rem solid;
+    padding: 1.5rem;
+     font-family: "OptimaRegular"; 
+    font-size: 3rem;
+}
+.opinion {
+    display: flex; 
+    flex-flow: column;
+    align-content: flex-start;
+    position: relative; 
+    top: 10rem;   
+}
+.form__comments {
+    margin: 3rem;
+}
+.form__field {
+    background-color: #ffecd6;
+    margin-bottom: 2rem;
+}
+
+.rating__stars {
+    display: flex; 
+    flex-flow: row; 
+    margin-bottom: 2rem;
+}
+.rating__img {
+    position: relative; 
+    left: 3rem;
+    padding-right: 2.5rem;
+}
+
+.navigation__subjects {
+    display: flex; 
+    flex-flow: row; 
+    justify-content: space-evenly; 
+    margin-bottom: 5rem;
+}
+.subject__button {
+    border: none;
+    display: inline-block;
+}
+.subject--title {
+    font-family: "Futura";
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: white;
+    position: relative; 
+    top: 13rem;
+}
+
+.blog__overview {
+    margin-bottom: 10rem; 
+}
+.blog__list {
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr); 
+    grid-gap: 2rem;
+}
+.blog__item {
+    width: 20rem; 
+    height: 35rem; 
+    background-color: #ffd5a6;
+    display: flex; 
+    flex-flow: column;
+    justify-content: center;
+    align-content: center;
+}
+.blog__image {
+    display: flex; 
+    align-self: center;
+    margin-top: 2.5rem;
+}
+.blog__information {
+    display: flex; 
+    flex-flow: column; 
+    justify-content: space-between;
+    margin: 1rem;
+}
+.blog__title {
+    font-family: "OptimaBlack";
+    font-size: 1.5rem; 
+    text-transform: uppercase;
+    padding-bottom: 1rem;
+    display: flex; 
+    flex-flow: row;
+    justify-content: flex-end;
+}
+.blog__user {
+    font-family: "OptimaItalic"; 
+    font-size: 1rem; 
+    padding-bottom: 2rem; 
+    display: flex; 
+    align-self: flex-end;
+}
+.blog__intro {
+    width: 15rem;
+    font-family: "OptimaRegular"; 
+    font-size: 1rem; 
+    display: flex; 
+    align-self: center;
+}
+
+.article__information {
+    display: flex; 
+    flex-flow: column; 
+    align-items: flex-end;
+    text-align: right;
+}
+.article__overview {
+    display: flex; 
+    flex-flow: row; 
+    justify-content: space-between;
+}
+.article__user {
+    position: relative; 
+    top: -5rem; 
+    right: 5rem;
+}
+.article__steps {
+    position: relative; 
+    left: 8rem;
+}
+.related {
+    display: flex; 
+    flex-flow: row; 
+    justify-content: space-between;
+    margin-bottom: 5rem;
+}
+.articles__list {
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-rows: repeat(3, 1fr);*/ 
+    grid-gap: 1rem;
+}
+.filter__link {
+    text-decoration: none;
+}
+
+.looks__list {
+    display: flex; 
+    flex-flow: column;
+    align-items: center;
+}
+.look__item {
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: flex-end;
+}
+.subtitle__looks {
+    display: flex; 
+    justify-content: flex-end;
+    text-align: right;
+}
+
+.create__form {
+    margin-top: 5rem; 
+    padding-top: 2rem;
+    display: flex; 
+    flex-flow: row; 
+    justify-content: space-between;
+    margin-bottom: 10rem; 
+}
+.form__create--blog {
+    position: relative; 
+    top: 4rem;
+}
+.form__field {
+    margin: 2rem;
+}
+.form__label {
+    font-family: "OptimaItalic"; 
+    font-size: 2rem; 
+    color: #d77400;
+    margin-bottom: 2rem;
+}
+.create__image {
+    display: flex; 
+    flex-flow: row; 
+}
+.image__form {
+    display: flex; 
+    flex-flow: column;
+}
+.image__form--background {
+    position: relative;  
+
+    -webkit-animation:spin 6s linear infinite;
+    -moz-animation:spin 6s linear infinite;
+    animation:spin 6s linear infinite;
+}
+.image__form {
+    position: relative; 
+}
+
+
+
+.fame {
+    font-family: "Hollywood";
+    color: #352753; 
+    font-size: 10rem; 
+    padding: 2rem; 
+    display: flex; 
+    justify-content: center; 
+    border-top: 1rem solid #d24933; 
+    border-bottom: 1rem solid #d24933;
+}
+.scroll {
+    display: flex; 
+    justify-content: center;
+}
+.scroll__item {
+    margin: 2rem;
+}
+.scroll__user {
+    font-family: "Futura";
+    text-align: center;
+    font-size: 7rem;
+    color: #ffecd6; 
+    -webkit-text-stroke: #d24933 0.3rem;
+}
+
+input[type=range] {
+  width: 50rem;
+  margin: 5.85px 0;
+  background-color: transparent;
+  -webkit-appearance: none;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  background: #d77400;
+  border: 1.1px solid #e8cd6a;
+  border-radius: 1px;
+  width: 100%;
+  height: 11.3px;
+  cursor: pointer;
+}
+input[type=range]::-webkit-slider-thumb {
+  margin-top: -6.95px;
+  width: 23px;
+  height: 23px;
+  background: #d24933;
+  border: 2.5px solid #d24933;
+  border-radius: 12px;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #f18200;
+}
+input[type=range]::-moz-range-track {
+  background: #d77400;
+  border: 1.1px solid #e8cd6a;
+  border-radius: 1px;
+  width: 100%;
+  height: 11.3px;
+  cursor: pointer;
+}
+input[type=range]::-moz-range-thumb {
+  width: 23px;
+  height: 23px;
+  background: #d24933;
+  border: 2.5px solid #d24933;
+  border-radius: 12px;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  background: transparent;
+  border-color: transparent;
+  border-width: 8.45px 0;
+  color: transparent;
+  width: 100%;
+  height: 11.3px;
+  cursor: pointer;
+}
+input[type=range]::-ms-fill-lower {
+  background: #be6600;
+  border: 1.1px solid #e8cd6a;
+  border-radius: 2px;
+}
+input[type=range]::-ms-fill-upper {
+  background: #d77400;
+  border: 1.1px solid #e8cd6a;
+  border-radius: 2px;
+}
+input[type=range]::-ms-thumb {
+  width: 23px;
+  height: 23px;
+  background: #d24933;
+  border: 2.5px solid #d24933;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 0px;
+  /*Needed to keep the Edge thumb centred*/
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #d77400;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #f18200;
+}
